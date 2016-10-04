@@ -1,15 +1,14 @@
 
 import os, requests, bs4
 
-i=0
+
 url = 'http://xkcd.com/'
 
 os.makedirs('/Users/kunalprakash/Rest/Programming/Files/xkcd', exist_ok=True)
 
-while i<10:
-#while not url.endswith('#'):
-    #TOD: Download the page
-    i=i+1
+while not url.endswith('#'):
+    #TODO: Download the page
+   
     print ('Downloading page %s...' %url)
     res = requests.get(url)
     res.raise_for_status()
