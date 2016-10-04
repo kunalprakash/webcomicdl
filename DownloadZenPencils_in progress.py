@@ -4,7 +4,7 @@ import os, requests, bs4
 
 url = 'http://zenpencils.com/comic/1-ralph-waldo-emerson-make-them-cry/'
 
-os.makedirs('/Users/kunalprakash/Rest/Programming/Files/zepe', exist_ok=True)
+os.makedirs('/Users/<username>/zepe', exist_ok=True)
 
 while not url.endswith('#'):
     #TODO: Download the page
@@ -34,7 +34,7 @@ while not url.endswith('#'):
 
 
     #TODO: Save the image to ./zepe
-    imageFile = open(os.path.join('/Users/kunalprakash/Rest/Programming/Files/zepe', os.path.basename(comicUrl)), 'wb')
+    imageFile = open(os.path.join('/Users/<username>/zepe', os.path.basename(comicUrl)), 'wb')
     for chunk in res.iter_content(100000):
         imageFile.write(chunk)
     imageFile.close()
