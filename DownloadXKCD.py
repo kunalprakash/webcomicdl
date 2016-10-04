@@ -4,7 +4,7 @@ import os, requests, bs4
 
 url = 'http://xkcd.com/'
 
-os.makedirs('/Users/kunalprakash/Rest/Programming/Files/xkcd', exist_ok=True)
+os.makedirs('/Users/<username>/xkcd', exist_ok=True)
 
 while not url.endswith('#'):
     #TODO: Download the page
@@ -35,7 +35,7 @@ while not url.endswith('#'):
 
 
     #TODO: Save the image to ./xkcd
-    imageFile = open(os.path.join('/Users/kunalprakash/Rest/Programming/Files/xkcd', os.path.basename(comicUrl)), 'wb')
+    imageFile = open(os.path.join('/Users/<username>/xkcd', os.path.basename(comicUrl)), 'wb')
     for chunk in res.iter_content(100000):
         imageFile.write(chunk)
     imageFile.close()
